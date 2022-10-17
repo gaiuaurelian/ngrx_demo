@@ -10,3 +10,9 @@
   flex-direction: column;
   padding: 0 10px;
 }
+
+.book-edit--button {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
