@@ -5,7 +5,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
+import { RemoveBookDialogModule } from '../remove-book-dialog/remove-book-dialog.module';
 import { BooksComponent } from './books.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 const COMPONENTS = [BooksComponent];
 
@@ -17,6 +19,8 @@ const COMPONENTS = [BooksComponent];
     MatIconModule,
     MatButtonModule,
     MatListModule,
+    RemoveBookDialogModule,
+    MatProgressBarModule,
   ],
   declarations: COMPONENTS,
   exports: COMPONENTS,

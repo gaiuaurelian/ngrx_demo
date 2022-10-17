@@ -3,7 +3,6 @@
   <mat-icon>arrow_back</mat-icon>
 </a>
 <section *ngIf="(book$ | async) == null">
-  <mat-progress-spinner></mat-progress-spinner>
 </section>
 <section *ngIf="(book$ | async) != null" class="book-container">
   <div class="book-cover">

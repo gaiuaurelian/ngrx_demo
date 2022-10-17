@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { LibraryModule } from './library/library.module';
-import { RemoveBookDialogModule } from './library/remove-book-dialog/remove-book-dialog.module';
 import { LibraryEffects } from './library/state/library.effects';
 import { libraryReducer } from './library/state/library.reducer';
 

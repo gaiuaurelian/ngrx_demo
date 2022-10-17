@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
-import { filter, map } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { Book } from '../models/book';
 import { Book as BookPayload } from '../../../server/types';
 
@@ -60,9 +60,3 @@ export class BooksService {
     return this.http.put<any>(`/api/books/${id}`, book);
   }
 }
-
-// return response.books.map(book => {
-//   return {
-
-//   };
-// })

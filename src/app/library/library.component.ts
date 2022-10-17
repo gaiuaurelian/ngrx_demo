@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { countBooks } from './state/library.selector';
@@ -10,6 +9,6 @@ import { countBooks } from './state/library.selector';
 })
 export class LibraryComponent {
   booksCount$: Observable<number> = this.store.select(countBooks);
-  editPageOpened;
+
   constructor(private readonly store: Store) {}
 }

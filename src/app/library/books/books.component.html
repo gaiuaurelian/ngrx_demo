@@ -1,4 +1,6 @@
-<div *ngIf="isLoading$ | async">loading</div>
+<div class="loading-container" *ngIf="(isLoading$ | async)">
+  <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
+</div>
 
 <div *ngIf="!(isLoading$ | async)" class="content">
   <ul role="list" class="book-list" *ngFor="let book of books$ | async">

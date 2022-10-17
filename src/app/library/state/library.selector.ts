@@ -17,14 +17,3 @@ export const isListCurrentlyLoading = createSelector(
   (state: LibraryState) =>
     state.status === LibraryStatusEnum.LOADING ? true : false
 );
-export const selectBook = (id) =>
-  createSelector(selectBooks, (state: LibraryState) => {
-    console.log('state', state);
-    if (state) {
-      return state.books.find((item) => {
-        return item.id === id;
-      });
-    } else {
-      return null;
-    }
-  });

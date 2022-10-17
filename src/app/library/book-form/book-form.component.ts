@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { BooksService } from '../books/books.service';
+import { BooksService } from '../services/books.service';
 import { Book } from '../models/book';
 import { addBook, updateBook } from '../state/library.actions';
 
@@ -49,8 +49,8 @@ export class BookFormComponent implements OnInit {
         this.coverUrlFormControl.setValue(response.imageUrl);
 
         for (let author of response.authors) {
-          const auhtorFormControl = new FormControl(author.name);
-          this.authorsFormArray.push(auhtorFormControl);
+          const authorFormControl = new FormControl(author.name);
+          this.authorsFormArray.push(authorFormControl);
         }
       });
     }

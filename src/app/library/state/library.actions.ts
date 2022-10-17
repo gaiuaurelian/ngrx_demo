@@ -6,13 +6,13 @@ export const addBook = createAction(
   props<{ book: Book }>()
 );
 
-export const removeBook = createAction(
-  '[Library Page] Remove book',
+export const updateBook = createAction(
+  '[Book Form] Update book',
   props<{ book: Book }>()
 );
 
-export const updateBook = createAction(
-  '[Book Form] Update book',
+export const removeBook = createAction(
+  '[Library Page] Remove book',
   props<{ book: Book }>()
 );
 

@@ -5,7 +5,7 @@ import { createEffect } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { switchMap, map, catchError } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
-import { BooksService } from '../books/books.service';
+import { BooksService } from '../services/books.service';
 import { Book } from '../models/book';
 import {
   addBook,

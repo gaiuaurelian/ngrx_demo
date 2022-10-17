@@ -48,5 +48,5 @@ export const libraryReducer = createReducer(
     status: LibraryStatusEnum.ERROR,
   })),
   on(addBook, (state) => ({ ...state, status: LibraryStatusEnum.LOADING })),
-  on(removeBook, (state) => ({ ...state, status: LibraryStatusEnum.LOADING }))
+  on(removeBook, (state) => ({ ...state, status: LibraryStatusEnum.PENDING }))
 );

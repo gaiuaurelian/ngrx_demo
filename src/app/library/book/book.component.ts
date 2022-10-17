@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, tap } from 'rxjs';
-import { BooksService } from '../books/books.service';
+import { BooksService } from '../services/books.service';
 import { Book } from '../models/book';
-import { selectBook } from '../state/library.selector';
 
 @Component({
   selector: 'app-book',

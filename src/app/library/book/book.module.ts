@@ -4,12 +4,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { BookComponent } from './book.component';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 const COMPONENTS = [BookComponent];
 
 @NgModule({
-  imports: [CommonModule, RouterModule, MatIconModule, MatButtonModule, MatProgressSpinnerModule],
+  imports: [CommonModule, RouterModule, MatIconModule, MatButtonModule],
   declarations: COMPONENTS,
   exports: COMPONENTS,
 })
