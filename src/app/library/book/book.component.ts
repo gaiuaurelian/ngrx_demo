@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { BooksService } from '../books/books.service';
 import { Book } from '../models/book';
 import { selectBook } from '../state/library.selector';

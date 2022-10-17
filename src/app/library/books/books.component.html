@@ -8,10 +8,10 @@
           {{ book.title }}
         </a>
         <span class="spacer"></span>
-        <a mat-icon-button class="book-edit--button" [routerLink]="['edit', book.id]">
+        <a mat-icon-button class="book-edit--button" color="primary" [routerLink]="['edit', book.id]">
           <mat-icon>edit</mat-icon>
         </a>
-        <button mat-icon-button (click)="onRemove(book)">
+        <button mat-icon-button color="warn" (click)="onRemove(book)">
           <mat-icon>delete</mat-icon>
         </button>
       </div>

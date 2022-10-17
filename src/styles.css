@@ -10,3 +10,11 @@ body {
 .spacer {
   flex: 1 0 auto;
 }
+
+
+
+a.mat-icon-button {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
