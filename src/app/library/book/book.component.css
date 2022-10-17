@@ -1,10 +1,16 @@
 .book-container {
   display: flex;
-  padding: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+.book-container > div {
+  display: flex;
+  max-width: 500px;
 }
 
 .book-cover {
-  height: 100px;
+  margin-right: 10px;
 }
 
 .book-details {

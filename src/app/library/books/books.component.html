@@ -3,8 +3,8 @@
 </div>
 
 <div *ngIf="!(isLoading$ | async)" class="content">
-  <ul role="list" class="book-list" *ngFor="let book of books$ | async">
-    <li role="listitem">
+  <ul role="list" class="book-list" >
+    <li role="listitem" *ngFor="let book of books$ | async">
       <div class="list-item--content">
         <a mat-flat-button [routerLink]="[book.id]">
           {{ book.title }}
