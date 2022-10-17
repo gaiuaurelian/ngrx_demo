@@ -1,0 +1,12 @@
+<a mat-icon-button [routerLink]="['/books']">
+  <mat-icon>arrow_back</mat-icon>
+</a>
+<section *ngIf="(book$ | async) != null" class="book-container">
+  <div class="book-cover">
+    <img height="300px" [src]="(book$ | async)?.imageUrl" />
+  </div>
+  <div class="book-details">
+    <h1 class="mat-title">{{ (book$ | async)?.title }}</h1>
+    <p>{{ (book$ | async)?.description }}</p>
+  </div>
+</section>

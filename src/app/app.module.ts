@@ -1,18 +1,30 @@
 import { NgModule } from '@angular/core';
+import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+import { LibraryModule } from './library/library.module';
+import { RemoveBookDialogModule } from './library/remove-book-dialog/remove-book-dialog.module';
+import { LibraryEffects } from './library/state/library.effects';
+import { libraryReducer } from './library/state/library.reducer';
+
+const COMPONENTS = [AppComponent];
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    LibraryModule,
+    MatDialogModule,
+    StoreModule.forRoot({ library: libraryReducer }),
+    EffectsModule.forRoot([LibraryEffects]),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: COMPONENTS,
+  bootstrap: COMPONENTS,
 })
-export class AppModule { }
+export class AppModule {}

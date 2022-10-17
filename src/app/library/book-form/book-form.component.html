@@ -1,0 +1,59 @@
+<section class="page-header">
+  <a mat-icon-button [routerLink]="['/books']">
+    <mat-icon>arrow_back</mat-icon>
+  </a>
+  <h1 class="mat-title">{{ createBook ? 'Create book' : 'Edit book' }}</h1>
+</section>
+<form class="book-form" [formGroup]="bookForm">
+  <mat-form-field appearance="outline">
+    <mat-label>Title</mat-label>
+    <input
+      matInput
+      type="text"
+      placeholder="Enter a book title"
+      [formControl]="titleFormControl"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Description</mat-label>
+    <textarea
+      matInput
+      rows="5"
+      [formControl]="descriptionFormControl"
+      placeholder="Enter a book description"
+    ></textarea>
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="example-form-field">
+    <mat-label>Publish date</mat-label>
+    <input
+      matInput
+      [matDatepicker]="datepicker"
+      [formControl]="publishDateFormControl"
+    />
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+    <mat-datepicker #datepicker>
+      <mat-datepicker-actions>
+        <button mat-button matDatepickerCancel>Cancel</button>
+        <button mat-raised-button color="primary" matDatepickerApply>
+          Apply
+        </button>
+      </mat-datepicker-actions>
+    </mat-datepicker>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Cover url</mat-label>
+    <input
+      matInput
+      type="text"
+      placeholder="Enter cover url"
+      [formControl]="coverUrlFormControl"
+    />
+  </mat-form-field>
+  <section class="form-footer">
+    <a mat-button color="warn" [routerLink]="['/books']">Cancel</a>
+    <button mat-flat-button color="primary" (click)="onSave()">
+      {{ createBook ? 'Create' : 'Edit' }}
+    </button>
+  </section>
+</form>

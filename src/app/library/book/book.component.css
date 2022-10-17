@@ -1,0 +1,12 @@
+.book-container {
+  display: flex;
+  padding: 10px;
+}
+
+.book-cover {
+  height: 100px;
+}
+
+.book-details {
+  margin-left: 10px;
+}
